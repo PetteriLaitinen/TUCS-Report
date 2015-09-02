@@ -1,0 +1,191 @@
+\documentclass[12pt]{tucsreport_2013}
+% Note, a tucsreport is a specialisation of the LaTeX article class,
+% it therefore takes all the same options that the article class does.
+% Note also that the "a4paper", "twoside" and "titlepage" options are invoked
+% by default in a tucsreport.
+
+\usepackage{times}  % Times fonts
+
+\begin{document}
+
+  \title{Preparing a TUCS Technical Report with {\LaTeX} }
+
+  % Separate multiple authors with "\and".
+  % Use the \thanks command to give your address
+  \author{Mats Aspn\"as
+      \thanks{{\AA}bo Akademi University, Department of Computer Science\\
+      Joukahaisenkatu 3-5A, 20520 Turku, Finland\\
+      {\tt mats@abo.fi}}
+    \and Jonatan Kronqvist\thanks{Turku Centre for Computer Science\\
+        Joukahaisenkatu 3-5 A, 20520 Turku, Finland\\
+        {\tt jokronqv@abo.fi}}}
+
+  \tucsnumber{0}		% The number of the report (required)
+  \isbn{XXX-XXX-XXX-X}	% The ISBN number of the report (reuired)
+  \date{March 2013}		% Just give the month and year for the date (required)
+
+  % This extra field gives the TUCS laboratory that produced the report.
+  % If you want to specify two laboratorie, separate them with \\
+  \lab{TUCS Laboratory}
+
+  % Keywords that describe the report.
+  \keywords{TUCS technical reports, \LaTeX}
+  \maketitle
+
+  \begin{abstract}
+    This document describes how to prepare a TUCS technical report using
+      the {\LaTeX} \textsf{tucsreport\_2013} document class.
+    This portion of the document was created with the \textsf{abstract}
+      environment.
+  \end{abstract}
+
+
+  \section{Preparing Your TUCS Report}
+
+    The \textsf{tucsreport\_2013} document class is just a specialisation of the
+      standard {\LaTeX} \cite{latex, companion} \textsf{article} document class.
+    To use the \textsf{tucsreport\_2013} document class, just begin your
+      {\LaTeX} document like this:
+    \begin{verbatim}
+      \documentclass[12pt]{tucsreport_2013}
+    \end{verbatim}
+
+    You should select either the \textsf{12pt} or \textsf{11pt} options for
+    your document, since the printed version of the report will be reduced to
+    84 \% of the original size when it is printed on B5 paper. A text size of
+    ten points will be too small.
+
+    You can use all the same options with the \textsf{tucsreport\_2013} document
+      class that you can use with the \textsf{article} class, and all the same
+      commands and packages as well. The only differences between the
+      standard \textsf{article} document class and the \textsf{tucsreport\_2013}
+      document class are as follows:
+
+    \begin{itemize}
+      \item
+	The \textsf{a4paper} and \textsf{twoside} options for printing on both sides
+	of A4 paper are selected by default by the \textsf{tucsreport\_2013} document
+	class. The \textsf{titlepage} option is also selected by default.
+      \item
+	The \verb"\maketitle" command of a \textsf{tucsreport\_2013} document
+	  requires some additional fields to the standard \texttt{author}, \texttt{title},
+	  and \texttt{date} fields of the \textsf{article} document class. These fields are:
+	
+	\begin{description}
+	  \item[tucsnumber:]
+	    Use the command \verb"\tucsnumber" to set the number of the technical
+	    report. If left unset, this field will default to `?'.
+	  \item[isbn:]
+	    Use the command \verb"\isbn" to set the ISBN number of the technical
+	    report. If left unset, this field will default to `?'.
+	  \item[keywords:]
+	    Use the command \verb"\keywords" to give a list of keywords that
+	    characterise the content of the report. The keywords will appear just after
+	    the abstract. This field is optional and can be left unset, but it is a good idea
+	    to include the keywords.
+	  \item[lab:]
+	    Use the command \verb"\lab" to set the name of the TUCS  research
+	    laboratory that produced the report. The laboratory will will appear after
+	    the abstract.
+	\end{description}
+	
+	Instructions for obtaining technical report number and ISBN number
+	for a new report can be found on the TUCS' web pages.
+	
+	Note,
+	when setting the \texttt{date} field, just give the month and year.
+	For example \verb"\date{August 2013}". If you do not set the date field,
+	it will default to the current month and year.
+	
+      \item
+	The last, and most important, difference is that when you use the
+	  \textsf{tucsreport\_2013} document class, your document will look like
+	  a TUCS Technical Report with front and back pages that obey
+	  the graphical recommendations of TUCS.
+    \end{itemize}
+
+    For an example of how to prepare a TUCS Technical Report with
+    {\LaTeX}, why not take a look at the source code of this document.
+
+
+  \section{Multiple Authors and Departments}
+    The standard {\LaTeX} commands for specifying multiple authors and
+      their affiliation are supported. Multiple authors are separated by the
+      \verb"\and" command. The \verb"\thanks" command can be used to
+      give the affiliation of an author. When required, explicit line breaks
+      must be inserted in \verb"\thanks" commands, for instance to put the
+      mail address on a separate line.
+
+    Here is an example of an \verb"\author" command for a document with
+      multiple authors from different departments.
+    {\footnotesize\begin{verbatim}
+	\author{
+	  Author One\thanks{
+	    University of Turku, Department of Information Technology,\\
+	    Joukahaisenkatu 3-5, FIN-20520 Turku, Finland \\
+	    {\tt author.one@utu.fi} }
+	\and
+	  Author Two\thanks{
+	    {\AA}bo Akademi University, Department of Computer Science,\\
+	    Joukahaisenkatu 3-5, FIN-20520 Turku, Finland \\
+	    {\tt author.two@abo.fi} }
+	}
+    \end{verbatim}}
+
+
+\section{Pictures}
+
+  There are many alternative ways of including pictures in your
+  technical report. Both the \textsf{epsfig} and the  \textsf{graphicx} packages
+  are known to work well. The following PostScript figure was produced like
+  this:
+
+  {\small\begin{verbatim}
+	\begin{figure}[ht]
+	   \centering
+	   \includegraphics[width=5cm]{TUCS_logo.eps}
+	   \caption{Example of using a PostScript figure}
+	\end{figure}
+  \end{verbatim}}
+
+  \begin{figure}[ht]
+     \centering
+     \includegraphics[width=5cm]{TUCS_logo.eps}
+     \caption{Example of using a PostScript figure}
+  \end{figure}
+
+
+\section{Processing Your TUCS Report}
+
+
+  To process your TUCS report you will need to ensure that {\LaTeX} has
+  access to the following files: \\
+	\texttt{tucsreport\_2013.cls}, \\
+	\texttt{TUCS\_etukansi.eps}, \\
+	\texttt{TUCS\_taka\-kansi.eps}, \\
+	\texttt{TUCS\_logo.eps}, \\
+	\texttt{tylogo.eps}, \\
+	\texttt{aalogo.eps}, and \\
+	\texttt{tukkk\-logo.eps}. \\
+	
+    How you arrange that will depend on what sort of system you are running.
+    If you are using a UNIX-based system and use \texttt{dvips} as your \textsf{dvi}
+    to PostScript driver all you have to do is set your \texttt{TEXINPUTS} path
+    to include the directory that contains these files.
+
+\vfill
+
+  \begin{thebibliography}{1}
+    \bibitem{latex}
+      Leslie Lamport.
+      \textit{{\LaTeX}: A document preparation system},
+      2nd edition. Addison Wesley. 1994.
+
+    \bibitem{companion}
+      Michel Goosens, Frank Mittelbach, Alexander Samarin.
+      \textit{The {\LaTeX} Companion}.
+      Addison Wesley. 1994.
+
+  \end{thebibliography}
+
+\end{document}
