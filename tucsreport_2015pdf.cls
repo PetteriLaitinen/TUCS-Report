@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tucsreport_2013pdf}[2005/06/06 TUCS Technical Report.]
+\ProvidesClass{tucsreport_2015pdf}[2005/06/06 TUCS Technical Report.]
 
 \RequirePackage{ifthen,graphicx}
 \RequirePackage[usenames]{color}
