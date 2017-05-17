@@ -21,8 +21,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TUCS reports have some fields that articles dont, namly:
 %   tucsnumber: The number of the TUCS report.
-%   isbn: The ISBN number of the report.	
-%   lab: The TUCS laboratory that produced the report.	
+%   isbn: The ISBN number of the report.
+%   lab: The TUCS laboratory that produced the report.
 %   keywords: Some keywords the describe the report.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\@tucsnumber}{?}
@@ -248,7 +248,7 @@
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TUCS reports have a page at the end with some logos on it.	
+% TUCS reports have a page at the end with some logos on it.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \AtEndDocument{%
@@ -268,7 +268,7 @@
 
  \begin{picture}(100,100)(0,0)
       \put(-80,-600){\includegraphics{TUCS_takakansi.pdf}}
-      \put(-40,-130){\parbox[t]{15cm}{\color{white}\tinfo@font{Joukahaisenkatu 3-5 A, 20520 TURKU,
+      \put(-40,-130){\parbox[t]{15cm}{\color{white}\tinfo@font{Vesilinnantie 3, 20500 TURKU,
       Finland \ $|$\  www.tucs.fi}}}
       \end{picture}
 
@@ -287,12 +287,12 @@
 		    {\back@font Department of Mathematics and Statistics} \\
 		{\it Turku School of Economics} \\
 		  {\color{blue}$\bullet$}
-		    {\back@font Institute of Information Systems Sciences} \vspace{\baselineskip}
-	
+		    {\back@font Institute of Information Systems Sciences} \\
+
 	     }  % end of \parbox
         }%end of \put
 	} % end of \hbox
-	
+
     \vspace{6mm}
 
      \hbox{
