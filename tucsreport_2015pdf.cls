@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tucsreport_2013pdf}[2005/06/06 TUCS Technical Report.]
+\ProvidesClass{tucsreport_2015pdf}[2005/06/06 TUCS Technical Report.]
 
 \RequirePackage{ifthen,graphicx}
 \RequirePackage[usenames]{color}
@@ -196,10 +196,10 @@
     \begin{picture}(100,100)(0,0)
       \put(-60,-345){\includegraphics{TUCS_etukansi.pdf}}
       \put(-35,130){\parbox[t]{15cm}{\color{white}\author@font\@author}}
-      \put(-35,10){\parbox[t]{15cm}{\color{white}\title@font\@title}}
+      \put(-35,10){\parbox[t]{15cm}{\color{white}\hyphenpenalty=10000\title@font\@title}}
       \put(-4,-270){\centerline{\author@font{\color{Gray}TUCS Technical Report}}}
       \put(-4,-290){\centerline{\tinfo@font{\color{Gray}No \@tucsnumber, \@date}}}
-    \end{picture} \\
+    \end{picture} \vspace{\baselineskip}
   \end{figure}
   \cleardoublepage
 
@@ -212,7 +212,7 @@
       \begin{picture}(100,100)(0,0)
         \put(-40,200){\includegraphics[scale=0.50]{TUCS_logo.pdf}}
 	\put(-30,190){\parbox[t]{15cm}{
-	  {\color{black}\titletwo@font\@title}   \vspace{8mm} \\
+	  {\color{black}\hyphenpenalty=10000\titletwo@font\@title}   \vspace{8mm} \\
 	  {\color{black}\authortwo@font\@author}
 	} }
 	\put(-30,-260){\tinfotwo@font{\color{black}TUCS Technical Report}}
@@ -303,7 +303,7 @@
 		  {\color{blue}$\bullet$}
 		    {\back@font Computer Science} \\
 		  {\color{blue}$\bullet$}
-		    {\back@font Computer Engineering} \\
+		    {\back@font Computer Engineering} \vspace{\baselineskip}
 	     } % end of \parbox
         } %end of \put
 	} % end of \hbox
