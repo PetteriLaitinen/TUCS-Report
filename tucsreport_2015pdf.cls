@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tucsreport_2013pdf}[2005/06/06 TUCS Technical Report.]
+\ProvidesClass{tucsreport_2015pdf}[2005/06/06 TUCS Technical Report.]
 
 \RequirePackage{ifthen,graphicx}
 \RequirePackage[usenames]{color}
@@ -199,7 +199,7 @@
       \put(-35,10){\parbox[t]{15cm}{\color{white}\title@font\@title}}
       \put(-4,-270){\centerline{\author@font{\color{Gray}TUCS Technical Report}}}
       \put(-4,-290){\centerline{\tinfo@font{\color{Gray}No \@tucsnumber, \@date}}}
-    \end{picture} \\
+    \end{picture} \vspace{\baselineskip}
   \end{figure}
   \cleardoublepage
 
@@ -287,7 +287,7 @@
 		    {\back@font Department of Mathematics and Statistics} \\
 		{\it Turku School of Economics} \\
 		  {\color{blue}$\bullet$}
-		    {\back@font Institute of Information Systems Sciences} \\
+		    {\back@font Institute of Information Systems Sciences} \vspace{\baselineskip}
 	
 	     }  % end of \parbox
         }%end of \put
@@ -303,7 +303,7 @@
 		  {\color{blue}$\bullet$}
 		    {\back@font Computer Science} \\
 		  {\color{blue}$\bullet$}
-		    {\back@font Computer Engineering} \\
+		    {\back@font Computer Engineering} \vspace{\baselineskip}
 	     } % end of \parbox
         } %end of \put
 	} % end of \hbox
