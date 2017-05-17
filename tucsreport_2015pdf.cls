@@ -268,7 +268,7 @@
 
  \begin{picture}(100,100)(0,0)
       \put(-80,-600){\includegraphics{TUCS_takakansi.pdf}}
-      \put(-40,-130){\parbox[t]{15cm}{\color{white}\tinfo@font{Joukahaisenkatu 3-5 A, 20520 TURKU,
+      \put(-40,-130){\parbox[t]{15cm}{\color{white}\tinfo@font{Vesilinnantie 3, 20500 TURKU,
       Finland \ $|$\  www.tucs.fi}}}
       \end{picture}
 
