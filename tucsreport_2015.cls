@@ -282,7 +282,7 @@
           {\backhead@font University of Turku} \\
           {\it Faculty of Mathematics and Natural Sciences} \\
            {\color{blue}$\bullet$}
-            {\back@font Department of Information Technology} \\
+            {\back@font Department of Future Technologies} \\
            {\color{blue}$\bullet$}
             {\back@font Department of Mathematics and Statistics} \\
           {\it Turku School of Economics} \\
